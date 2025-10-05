@@ -1,0 +1,96 @@
+/* ce e html? */
+/* https://www.w3schools.com/cssref/pr_scroll-behavior.php#:~:text=This%20is%20default-,smooth,property%20to%20its%20default%20value. */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 100px 20px;
+    margin-top: 60px;
+    height: 100vh;
+}
+
+#home {
+    background: #f4f4f4;
+}
+
+#about {
+    background: #cce5ff;
+}
+
+#services {
+    background: #d4edda;
+}
+
+#contact {
+    background: #fff3cd;
+}
+
+/* --------------------------------------------------
+   Selector reference (examples)
+
+   - The `html` selector targets the root <html> element.
+     It's useful for things like `scroll-behavior`, setting
+     base `font-size` for `rem` units, or giving the root
+     element a full-height so child elements can use 100%.
+
+   - Common selector types shown below for quick reference:
+     element, class, id, descendant, pseudo-class, :root
+-------------------------------------------------- */
+
+/* element selector (targets the <html> element) */
+html {
+    /* e.g. scroll-behavior or base font-size */
+}
+
+/* :root is equivalent to html for custom properties (CSS variables) */
+:root {
+    --main-color: #333;
+}
+
+/* element selector */
+p {
+    color: #222;
+}
+
+/* class selector */
+.highlight {
+    background: yellow;
+}
+
+/* id selector and descendant selector */
+#home h1 {
+    font-size: 2rem;
+}
+
+/* descendant selector already used in this file: nav a */
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* Specificity notes (high-level):
+   element < class < id < inline styles
+   Use more specific selectors only when needed.
+*/

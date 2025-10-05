@@ -1,0 +1,49 @@
+/* ce e html? */
+/* https://www.w3schools.com/cssref/pr_scroll-behavior.php#:~:text=This%20is%20default-,smooth,property%20to%20its%20default%20value. */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #D97D55;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 100px 20px;
+    /* margin-top: 60px; */
+    height: 100vh;
+}
+
+#home {
+    background: #F4E9D7;
+}
+
+#about {
+    background: #B8C4A9;
+}
+
+#services {
+    background: #6FA4AF;
+}
+
+#contact {
+    background: #B18C6C;
+}
