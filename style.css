@@ -1,5 +1,9 @@
 /* ce e html? */
 /* https://www.w3schools.com/cssref/pr_scroll-behavior.php#:~:text=This%20is%20default-,smooth,property%20to%20its%20default%20value. */
+/* https://www.gumlet.com/learn/how-to-add-html-video-background/ */
+
+/* https://www.w3schools.com/howto/howto_css_fullscreen_video.asp */
+
 
 html {
     scroll-behavior: smooth;
@@ -28,21 +32,27 @@ nav a {
 }
 
 .section {
+    /* position: fixed; */
     padding: 100px 20px;
+    /* padding: 4px 4px; */
     /* margin-top: 60px; */
     height: 70vh;
-    border-top: 2px solid black; 
+    border-top: 2px solid rgb(92, 92, 92); 
     width: 100%;
     /* border-radius: 2%; */
 }
 
+
 #home {
-    background: #F4E9D7;
+    background: #f4e9d7a2;
+    overflow: hidden;
     /* opacity: 80%; */
+    /* z-index: 100;  */
 }
 
 #about {
     background: #B8C4A9;
+    
 }
 
 #services {
@@ -53,12 +63,47 @@ nav a {
     background: #B18C6C;
 }
 
-video {
+/* video {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* fill screen*/
-    z-index: -10;       
+    object-fit: cover; 
+    z-index: -1;       
+} */
+
+#myVideo { 
+    position: fixed; 
+    /*  top si left*/
+    /* padding: 100px 20px; */
+    /* padding-top: -100px; */
+    /* padding-right: value;
+    padding-bottom: value; */
+    /* padding-left: -20px; */
+    top:48px; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    min-width: 100%;
+    min-height: 100%;
+    /* width: 100%; 
+    height: 100%; 
+    width: auto; 
+    height: auto;  */
+    /* object-fit: cover;  */
+    z-index: -1;
+}
+.content { 
+    /* position: absolute;  */
+    /* top: 50%; 
+    left: 50%;  */
+    /* transform: translate(-50%, -50%);  */
+    color: rgb(23, 21, 21); /* Ensure text is readable */ 
+    text-align:  left; 
+    z-index: 1; 
+} 
+.content_subheader{
+    z-index: 1;
+
 }
