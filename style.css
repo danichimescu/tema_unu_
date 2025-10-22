@@ -7,6 +7,15 @@
 /* font-size: 16px; default font in root */
 /* https://www.w3schools.com/css/css3_animations.asp */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations */
+
+:root {
+    --orange: #FF6B00;
+    --dark-orange: #E55D00;
+    --light-gray: #f4f4f4;
+    --dark-gray: #333;
+    --white: #ffffff;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -20,7 +29,7 @@ body {
     /* padding-top: 80px; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* margin: 0; */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 nav {
@@ -71,6 +80,11 @@ nav {
 .nav-lista a:hover {
     color: #ff8c00;
 }
+
+
+
+/* section */
+
 section {
     /* position: fixed; */
     /* padding: 100px; */
@@ -84,6 +98,15 @@ section {
 
 }
 
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* video background */
 
 .video-container-back {
     /* position: fixed; */
@@ -171,20 +194,6 @@ section {
 
 
 
-.content { 
-    /* position: absolute;  */
-    /* top: 50%; 
-    left: 50%;  */
-    /* transform: translate(-50%, -50%);  */
-    color: rgb(23, 21, 21); /* Ensure text is readable */ 
-    text-align:  left; 
-    z-index: 1; 
-} 
-.content_subheader{
-    z-index: 1;
-
-}
-
   #services {
     background-image: url('assets/section2.jpg'); 
     background-size: cover;        
@@ -235,6 +244,16 @@ section {
     text-align: center;
 
   }
+      #login {
+    background-image: url('assets/section7.jpg'); 
+    background-size: cover;        
+    background-position: center;  
+    background-repeat: no-repeat;  
+    color: white;                 
+    padding: 100px 20px;          
+    text-align: center;
+
+  }
 
 .services_content {
 /* place-items: center; */
@@ -246,7 +265,7 @@ section {
     margin-bottom: 40px;
   }
 
-/* --- 5-column layout --- */
+/* --- 5 coloane --- */
   .services-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr); 
@@ -266,7 +285,7 @@ section {
     text-align: left;        
     transition: transform 0.8s; /* hover efect */
 }
-  /* --- Individual service --- */
+  /* --- sectiunea servicii --- */
   .service h3 {
     margin-bottom: 10px;
     font-size: 1.2rem;
@@ -278,7 +297,133 @@ section {
     line-height: 1.5;
   }
 
-  /* --- Responsive: stack on small screens --- */
+/* sectiunea about */
+
+.about-content {
+    margin-top: 100px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.team-image {
+    flex: 1;
+    min-width: 300px;
+    height: 400px;
+    background-image: url('assets/images/team1.jpg'); 
+    /* background: linear-gradient(135deg, var(--orange), var(--dark-orange)); */
+    background-size: cover;        
+    background-position: center;  
+    background-repeat: no-repeat; 
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 2%;
+    
+}
+
+.about-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+
+
+/* sectiunea contact */
+
+#contact h2 {
+    text-align: center;
+    font-size: 42px;
+    color: var(--orange);
+    margin-bottom: 40px;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info {
+    background: rgba(194, 193, 193, 0.59);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-info h3 {
+    color: var(--orange);
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
+
+.map-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.contact-form {
+    background: rgba(116, 116, 116, 0.749);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 5px;
+    background: rgba(255,255,255,0.1);
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--orange);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: var(--dark-orange);
+}
+
+  /* --- aici e responsive gen --- */
   @media (max-width: 900px) {
     .services-grid {
       grid-template-columns: repeat(2, 1fr);

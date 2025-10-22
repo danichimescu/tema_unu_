@@ -22,6 +22,7 @@
         <li><a href="#comanda">Make an order</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#login">Login</a></li>
       </ul>
     </div>
   </nav>
@@ -86,22 +87,63 @@
       <h1>Portfolio</h1>
     </div>
   </section>
+
   <section id="comanda">
     <div class="comanda_content">
       <h1>Make an order</h1>
     </div>
   </section>
+
   <section id="contact">
     <div class="content">
       <h1>Contact</h1>
-    </div>
-  </section>
-  <section id="about">
-    <div class="content">
-      <h1>About</h1>
+                  <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Our Location</h3>
+                    <p>STRADA MAIOR ION RACOTEANU NR. 8<br>ET. 1, AP. 3<br>BUCURESTI, Romania</p>
+                    <p>Phone: +40 XXX XXX XXX</p>
+                    <p>Email: contact@sovisprint.ro</p>
+                    <p>Monday - Friday: 9:00 - 18:00<br>Saturday: 10:00 - 14:00</p>
+                    <div class="map-container">
+                        <iframe 
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.292209922429!2d26.119531676746472!3d44.42716787107605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff20ffcaa443%3A0x662b344932c7a2ce!2sStrada%20Ion%20G.%20Raco%C8%9Beanu%208%2C%20Bucure%C8%99ti%20030167!5e0!3m2!1sen!2sro!4v1761050749559!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactFormElement" onsubmit="submitContactForm(event)">
+                        <input type="text" id="contactName" placeholder="Your Name *" required>
+                        <input type="tel" id="contactPhone" placeholder="Phone Number *" required>
+                        <textarea id="contactMessage" placeholder="Your Message *" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
     </div>
   </section>
 
+  <section id="about">
+    <div class="content">
+      <h1>About</h1>
+                  <div class="about-content">
+                <div class="team-image">
+                    👥 Our Professional Team
+                </div>
+                <div class="about-text">
+                    <p>Sovis Print is a leading advertising company in Bucharest, specializing in comprehensive printing and advertising solutions. With over 10 years of experience, we've helped hundreds of businesses enhance their brand visibility.</p>
+                    <p>Our team of skilled professionals combines creativity with cutting-edge technology to deliver exceptional results. From small business cards to large-scale billboard campaigns, we handle projects of all sizes with the same dedication and attention to detail.</p>
+                    <p>We pride ourselves on using only premium materials and the latest printing technology to ensure your advertising materials stand out and make a lasting impression.</p>
+                </div>
+            </div>
+    </div>
+  </section>
+
+  <section id="login">
+    <div class="content">
+      <h1>Login</h1>
+    </div>
+  </section>
 </body>
 
 </html>
