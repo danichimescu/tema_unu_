@@ -84,68 +84,90 @@
   </section>
   <section id="portfolio">
     <div class="portfolio_content">
-      <h1>Portfolio</h1>
+      <!-- <h1>Portfolio</h1> -->
+      <div class="gallery-container">
+        <div class="gallery-header">
+          <h1>Portfolio</h1>
+          <div class="image-counter" id="imageCounter">Loading...</div>
+        </div>
+
+        <div class="image-display" id="imageDisplay">
+          <div class="loading-message">Loading images...</div>
+        </div>
+
+        <div class="controls">
+          <button class="nav-button" id="prevBtn" disabled>← Previous</button>
+          <button class="nav-button" id="nextBtn" disabled>Next →</button>
+        </div>
+
+        <div class="thumbnail-strip" id="thumbnailStrip"></div>
+
+        <div class="shortcuts">
+          Use ← → arrow keys to navigate | Click thumbnails to jump to image
+        </div>
+      </div>
     </div>
   </section>
 
-    <section id="order">
-        <div class="content">
-            <h2>Make an Order</h2>
-            <div class="order-form">
-                <div class="form-group">
-                    <label>Service Type:</label>
-                    <select id="serviceType" onchange="updateOrderForm()">
-                        <option value="">Select Service</option>
-                        <option value="printing">Printing</option>
-                        <option value="3d-letters">3D Letters</option>
-                        <option value="stickers">Stickers</option>
-                        <option value="billboards">Billboard Materials</option>
-                        <option value="promotional">Promotional Items</option>
-                    </select>
-                </div>
-
-                <!-- Printing Options -->
-                <div id="printingOptions" class="hidden">
-                    <div class="form-group">
-                        <label>Format:</label>
-                        <select id="printFormat">
-                            <option value="A5">A5</option>
-                            <option value="A4">A4</option>
-                            <option value="A3">A3</option>
-                            <option value="SRA3">SRA3</option>
-                            <option value="A2">A2</option>
-                            <option value="A1">A1</option>
-                            <option value="A0">A0</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Number of Copies:</label>
-                        <input type="number" id="copies" min="1" value="1">
-                    </div>
-                    <div class="form-group">
-                        <label>Print Type:</label>
-                        <select id="printType">
-                            <option value="single">Single Side</option>
-                            <option value="double">Double Side (Front & Back)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Color:</label>
-                        <select id="colorType">
-                            <option value="color">Full Color</option>
-                            <option value="bw">Black & White</option>
-                        </select>
-                    </div>
-                </div>
-
-                <button class="calculate-btn" onclick="calculatePrice()">Calculate Price</button>
-                <div class="price-result" id="priceResult"></div>
-
-                <button class="hidden" id="submit-estimated-calc-btn" onclick="sendEstimatedData()">Submit estimated price to message</button>
-                 
-            </div>
+  <section id="order">
+    <div class="content">
+      <h2>Make an Order</h2>
+      <div class="order-form">
+        <div class="form-group">
+          <label>Service Type:</label>
+          <select id="serviceType" onchange="updateOrderForm()">
+            <option value="">Select Service</option>
+            <option value="printing">Printing</option>
+            <option value="3d-letters">3D Letters</option>
+            <option value="stickers">Stickers</option>
+            <option value="billboards">Billboard Materials</option>
+            <option value="promotional">Promotional Items</option>
+          </select>
         </div>
-    </section>
+
+        <!-- Printing Options -->
+        <div id="printingOptions" class="hidden">
+          <div class="form-group">
+            <label>Format:</label>
+            <select id="printFormat">
+              <option value="A5">A5</option>
+              <option value="A4">A4</option>
+              <option value="A3">A3</option>
+              <option value="SRA3">SRA3</option>
+              <option value="A2">A2</option>
+              <option value="A1">A1</option>
+              <option value="A0">A0</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Number of Copies:</label>
+            <input type="number" id="copies" min="1" value="1">
+          </div>
+          <div class="form-group">
+            <label>Print Type:</label>
+            <select id="printType">
+              <option value="single">Single Side</option>
+              <option value="double">Double Side (Front & Back)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Color:</label>
+            <select id="colorType">
+              <option value="color">Full Color</option>
+              <option value="bw">Black & White</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="calculate-btn" onclick="calculatePrice()">Calculate Price</button>
+        <div class="price-result" id="priceResult"></div>
+
+        <button class="hidden" id="submit-estimated-calc-btn" onclick="sendEstimatedData()">Submit estimated price to
+          message</button>
+
+      </div>
+    </div>
+  </section>
 
   <section id="contact">
     <div class="content">
